@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    border-bottom: 4px solid #6fcfd1;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-links a.active,
+.nav-links a:hover,
+.nav-right a:hover {
+    color: #1e73be;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: black;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+/* Full width banner */
+.full-width-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #8ec9f0;
+    padding: 25px 0;
+    border-top: 2px solid #1e73be;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+/* Top section: Weather, Health, Advice */
+/* Top section: weather/health and advice side by side */
+.top-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 30px 0;
+}
+
+/* Left column: stack Weather and Health vertically */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* space between weather and health */
+}
+
+/* Boxes styling */
+.weather-box,
+.health-box,
+.advice-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Advice section */
+.advice-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Stack advice boxes vertically */
+.advice-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.advice-box {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+/* Top section: 3 columns side by side */
+/* Top section: 3 columns side by side */
+.top-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+/* All main columns */
+.weather-box,
+.advice-section,
+.riskassessment {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 260px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Article boxes stack vertically */
+.advice-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.advice-box {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Risk box (WHITE) */
+.risk-box {
+    background-color: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.layout {
+    display: flex;
+    min-height: 100vh; /* full screen height */
+}
+
+.left-img {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.right-content {
+    width: 50%;
+    padding: 20px;
+}
+.register-center {
+    h2{text-align: center;}
+    
+}
+.centre-text {
+    text-align: center;
+}
+.centre-text {
+    text-align: center;
+}
+.booking-container{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:40px;
+text-align:center;
+}
+
+.left,.middle,.right{
+width:250px;
+}
+
+.right button{
+display:block;
+margin:10px auto;
+padding:10px 20px;
+border-radius:20px;
+background:#2a7fa3;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.submit{
+margin-top:20px;
+font-size:16px;
+}
+
+.login-btn{
+background:#2a7fa3;
+color:white;
+padding:10px 20px;
+border-radius:20px;
+border:none;
+cursor:pointer;
+}
+
+.rules{
+margin-top:20px;
+}
+/* Make the link fixed on the right, vertically centred */
+/* Make the link fixed on the right, vertically centred */
+.accessibility-logo {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+/* Force image to be small */
+.accessibility-logo img {
+    width: 50px !important;   /* adjust size */
+    height: auto !important;
+    display: block;
+    max-width: 100% !important;
+}
