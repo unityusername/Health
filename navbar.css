@@ -252,3 +252,50 @@ margin-top:20px;
     display: block;
     max-width: 100% !important;
 }
+.accessibility-table {
+    border-collapse: collapse;
+    width: 400px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.accessibility-table th,
+.accessibility-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.accessibility-table th {
+    background: #f5f5f5;
+}
+.large-text {
+    font-size: 20px;
+}
+
+.high-contrast {
+    background: black;
+    color: yellow;
+}
+
+.dyslexia-font {
+    font-family: Arial, Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+.large-text {
+    font-size: 20px;
+}
+
+.high-contrast {
+    background: black;
+    color: yellow;
+}
+
+.dyslexia-font {
+    font-family: Arial, Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+.save-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
