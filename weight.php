@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,12 @@
     <title>Health Advice Group - Weight Loss</title>
     <link rel="stylesheet" href="navbar.css">
 </head>
-<body>
+<body class="
+<?php if(!empty($_SESSION['largeText'])) echo 'large-text '; ?>
+<?php if(!empty($_SESSION['highContrast'])) echo 'high-contrast '; ?>
+<?php if(!empty($_SESSION['dyslexiaFont'])) echo 'dyslexia-font '; ?>
+">
+
 <nav class="navbar">
     <!-- Logo -->
     <div class="nav-left">

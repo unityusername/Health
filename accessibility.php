@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,11 @@
     <link rel="stylesheet" href="navbar.css">
 </head>
 
-<body>
+<body class="
+<?php if(!empty($_SESSION['largeText'])) echo 'large-text '; ?>
+<?php if(!empty($_SESSION['highContrast'])) echo 'high-contrast '; ?>
+<?php if(!empty($_SESSION['dyslexiaFont'])) echo 'dyslexia-font '; ?>
+">
 
 <nav class="navbar">
     <div class="nav-left">
@@ -29,48 +34,62 @@
 
 <h2 style="text-align:center;">Accessibility Features</h2>
 
-<!-- Checkboxes with the text saying which accessibility feature it activates -->
 <form method="POST" action="save_accessibility.php">
 
-    <table class="accessibility-table">
-        <tr>
-            <th>Feature</th>
-            <th>Enable</th>
-        </tr>
+<table class="accessibility-table">
+<tr>
+<th>Feature</th>
+<th>Enable</th>
+</tr>
 
-        <tr>
-            <td>Large Text</td>
-            <td><input type="checkbox" name="largeText" id="largeText"></td>
-        </tr>
+<tr>
+<td>Large Text</td>
+<td>
+<input type="checkbox" name="largeText" id="largeText"
+<?php if(!empty($_SESSION['largeText'])) echo "checked"; ?>>
+</td>
+</tr>
 
-        <tr>
-            <td>High Contrast Mode</td>
-            <td><input type="checkbox" name="highContrast" id="highContrast"></td>
-        </tr>
-    
-        <tr>
-            <td>Dyslexia Friendly Font</td>
-            <td><input type="checkbox" name="dyslexiaFont" id="dyslexiaFont"></td>
-        </tr>
-    </table>
+<tr>
+<td>High Contrast Mode</td>
+<td>
+<input type="checkbox" name="highContrast" id="highContrast"
+<?php if(!empty($_SESSION['highContrast'])) echo "checked"; ?>>
+</td>
+</tr>
 
-    <button type="submit" class="save-btn">Save Settings</button>
+<tr>
+<td>Dyslexia Friendly Font</td>
+<td>
+<input type="checkbox" name="dyslexiaFont" id="dyslexiaFont"
+<?php if(!empty($_SESSION['dyslexiaFont'])) echo "checked"; ?>>
+</td>
+</tr>
 
+</table>
 
+<button type="submit" class="save-btn">Save Settings</button>
 
 </form>
 
 <script>
-document.getElementById("largeText").addEventListener("change", function(){
-    document.body.classList.toggle("large-text", this.checked);
-});
+document.addEventListener("DOMContentLoaded", function(){
 
-document.getElementById("highContrast").addEventListener("change", function(){
-    document.body.classList.toggle("high-contrast", this.checked);
-});
+function applyToggle(id, className){
+const el = document.getElementById(id);
+if(!el) return;
 
-document.getElementById("dyslexiaFont").addEventListener("change", function(){
-    document.body.classList.toggle("dyslexia-font", this.checked);
+document.body.classList.toggle(className, el.checked);
+
+el.addEventListener("change", function(){
+document.body.classList.toggle(className, this.checked);
+});
+}
+
+applyToggle("largeText","large-text");
+applyToggle("highContrast","high-contrast");
+applyToggle("dyslexiaFont","dyslexia-font");
+
 });
 </script>
 

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,12 @@
     <title>Health Advice Group - Home</title>
     <link rel="stylesheet" href="navbar.css">
 </head>
-<body>
+<body class="
+<?php if(!empty($_SESSION['largeText'])) echo 'large-text '; ?>
+<?php if(!empty($_SESSION['highContrast'])) echo 'high-contrast '; ?>
+<?php if(!empty($_SESSION['dyslexiaFont'])) echo 'dyslexia-font '; ?>
+">
+
 
 
 

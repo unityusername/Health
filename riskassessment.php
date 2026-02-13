@@ -1,4 +1,5 @@
 
+<?php session_start(); ?>
 
 
 <?php
@@ -17,7 +18,12 @@ $loggedIn = isset($_SESSION['user_id']);
 
 
 </head>
-<body>
+<body class="
+<?php if(!empty($_SESSION['largeText'])) echo 'large-text '; ?>
+<?php if(!empty($_SESSION['highContrast'])) echo 'high-contrast '; ?>
+<?php if(!empty($_SESSION['dyslexiaFont'])) echo 'dyslexia-font '; ?>
+">
+
 
 <nav class="navbar">
 <div class="nav-left">

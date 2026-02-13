@@ -6,5 +6,5 @@ $_SESSION['highContrast'] = isset($_POST['highContrast']);
 $_SESSION['dyslexiaFont'] = isset($_POST['dyslexiaFont']);
 
 header("Location: accessibility.php");
-exit;
+exit();
 ?>
