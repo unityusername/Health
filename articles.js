@@ -1,3 +1,4 @@
+// The article sections and that lets you click it and it brings you to a website
 const articles = [
     {
         title: "Asthma Advice",
